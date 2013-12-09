@@ -32,7 +32,7 @@ header {
 #logo {
 	font-size: 3em;
 	display: block;
-	width: 300px;
+	width: 400px;
 	float: left;
 }
 
@@ -50,4 +50,38 @@ nav {
 #loginForm {
 	width: 300px;
 	float: left;
+	border: 1px solid slategray;
+	padding: 10px;
+}
+
+#loginForm h3 {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+label {
+	display: block;
+	width: 100px;
+	float: left;
+}
+
+#userLogin {
+	margin: 20px 0;
+}
+
+#userLogin p input {
+	width: 250px;
+	padding: 5px;
+	clear: left;
+}
+
+#loginBtn {
+	border: none;
+	padding: 5px;
+	width: 263px;
+	font-size: 1.4em;
+}
+
+footer {
+	clear: left;
 }

@@ -8,6 +8,14 @@
 
 //index.php - default routing page
 
+	include "models/viewModel.php";
+
+	$view = new viewModel();
+
+	// ----- HEADER ----- \\
+	$view->getView("header");
+
+
 //set Action, Method, and Data passed through querystring
 if (isset($_GET['action'])) {
 	$queryAction=trim($_GET['action']);
@@ -34,3 +42,6 @@ if (file_exists("controllers/".$queryAction."Controller.php")) {
 	//controller page does not exist, return 404
 	include('404.php');
 }
+
+// ----- FOOTER ----- \\
+$view->getView("footer");

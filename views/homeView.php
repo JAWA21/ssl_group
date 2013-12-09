@@ -1,10 +1,11 @@
 <!-- homeView -->
 
 		<div class="wrap">
-			<img id="blogImg" src="../images/blog.jpg" alt="SSL1312 Blog">
+			<img id="blogImg" src="images/blog.jpg" alt="SSL1312 Blog">
 
 			<aside id="loginForm">
-				<form method="POST" action="?action=login">
+				<h3>User Login</h3>
+				<form id="userLogin" method="POST" action="?action=login">
 					<p>
 						<label for="username">Username:</label>
 						<input type="text" name="username" id="username">

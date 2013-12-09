@@ -5,7 +5,7 @@
 
 		<meta charset="utf-8">
 
-		<link type="text/css" href="main.css">
+		<link type="text/css" href="main.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -13,7 +13,7 @@
 	<header>
 
 		<div class="wrap">
-			<h1 id="logo">SSL1312 Blog</h1>
+			<h1 id="logo">SSL1312</h1>
 			<nav>
 				<ul>
 					<li><a href="?action=view&method=register">Register</a></li>
