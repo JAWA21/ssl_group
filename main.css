@@ -1,0 +1,39 @@
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+          << RESET >>
+/////////////////////////////////*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, strong, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, figcaption, footer, header, hgroup, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+      << GENERAL ELEMENTS >>
+/////////////////////////////////*/
+body {
+	font-size: .625em;
+	font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
+	color: slategrey;
+}
+
+.wrap {
+	font-size: 1.6em; /* 16px */
+	width: 960px;
+	margin: 0 auto;
+}
+
+header {
+	overflow: hidden;
+}
+
+#logo {
+	font-size: 3em;
+	display: block;
+	width: 300px;
+	float: left;
+}
+
+#
