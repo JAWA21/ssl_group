@@ -36,4 +36,18 @@ header {
 	float: left;
 }
 
-#
+nav {
+	clear: left;
+}
+
+#blogImg {
+	display: block;
+	width: 372px;
+	margin-right: 50px;
+	float: left;
+}
+
+#loginForm {
+	width: 300px;
+	float: left;
+}
