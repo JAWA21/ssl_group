@@ -27,6 +27,8 @@ body {
 
 header {
 	overflow: hidden;
+	border-bottom: 1px solid slategray;
+	margin-bottom: 20px;
 }
 
 #logo {
@@ -38,6 +40,16 @@ header {
 
 nav {
 	clear: left;
+}
+
+#main-nav {
+	float: right;
+}
+
+#main-nav ul li {
+	float: left;
+	width: 100px;
+	list-style-type: none;
 }
 
 #blogImg {
@@ -75,7 +87,7 @@ label {
 	clear: left;
 }
 
-#loginBtn {
+#loginBtn, #regSubmit {
 	border: none;
 	padding: 5px;
 	width: 263px;
@@ -84,4 +96,5 @@ label {
 
 footer {
 	clear: left;
+	border-top: 1px solid slategray;
 }
