@@ -1,15 +1,13 @@
 <?php
 //loginModel.php
 
-session_start();
-
 //user login
 
 
 	$username =$_POST["username"];
-	$pass = $_POST["password"];
+	$pass = $_POST["userpass"];
 
-	echo $result;
+	
 
 class loginModel {
 	//The view() function will display a page in the views subdirectory
@@ -27,10 +25,14 @@ class loginModel {
 		$st = $db->prepare($q);
 		
 		$st->fetchAll();
+
+		echo $st;
 		$isgood =$st->rowCount();
 		
 		if($isgood > 0){
 			$_SESSION["userid"] = 1;
+
+			echo 'loggedin';
 			return 1;
 		}else{
 			$_SESSION["userid"] = 0;

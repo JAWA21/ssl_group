@@ -16,9 +16,9 @@ $view = new viewModel();
 switch (strtolower($queryMethod)) {
 	case 'checklogin':
 		//make sure $_POST has valid info
-		if (isset($_POST['username']) && isset($_POST['password'])) {
+		if (isset($_POST['username']) && isset($_POST['userpass'])) {
 			//pass user/pass to checklogin method - if returns true, successful login
-			if ($login->checklogin($_POST['username'], $_POST['password'])) {
+			if ($login->checklogin($_POST['username'], $_POST['userpass'])) {
 				$queryData="Login successful.";
 				$view->getView('register');
 			} else {
