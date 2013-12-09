@@ -16,17 +16,26 @@ class loginModel {
 
 	public function checklogin($username, $password) {
 		//check user/pass against db - returns true on success
-		// if($username == $result:user_name){
-		$dbh = new PDO("mysql: hostname=localhost; dbname=simpBlog; port=8889", "root", "root");
-$result = mysql_query("SELECT user_name,user_pass FROM users where user_id=$_SESSION['userid'] VALUES (:user_name, :user_pass)");
 
+		$db = new PDO("mysql: hostname=localhost; dbname=simpBlog; port=8889", "root", "root");
+		$q = "select user_name, user_pass
+				from users
+				where user_name = :user_name and user_pass= :user_pass";
+		$q->bindParam(':user_name', $username);
+		$q->bindParam(':user_pass', $password);
 
-	$result->bindParam(':user_name', $username);
-	$result->bindParam(':user_pass', $password);
-
-		// }
-		$_SESSION['userid']=1;
-		return false;
+		$st = $db->prepare($q);
+		
+		$st->fetchAll();
+		$isgood =$st->rowCount();
+		
+		if($isgood > 0){
+			$_SESSION["userid"] = 1;
+			return 1;
+		}else{
+			$_SESSION["userid"] = 0;
+			return 0;
+		}
 	}
 
 	public function signout() {
@@ -34,5 +43,11 @@ $result = mysql_query("SELECT user_name,user_pass FROM users where user_id=$_SES
 		session_destroy();
 		session_start();
 	}
+		
+		
+		
+		
+		
+		
 }
 ?>

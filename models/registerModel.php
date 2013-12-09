@@ -11,8 +11,8 @@
 	$stmt->bindParam(':user_name', $name);
 	$stmt->bindParam(':user_pass', $hashsalt);
 
-	$name =$_POST["username"];
-	$str = $_POST["password"];
+	$name =$_POST["regName"];
+	$str = $_POST["regPass"];
 
 
 	$text = $_SESSION['text'];
@@ -22,21 +22,19 @@
 		$hashsalt = md5($salt.$str);
 	}
 
-	if(isset($_POST["capt"])) { 
-      	if(!empty($_POST['user']) && !empty($_POST['pass']) && !empty($_POST['capt'])) {  
-			$capt = $_POST["capt"];
-			
-			if($capt == $text){
-				$err = 'no error';
-				$stmt->execute();
-			}else{
-				$err = 'error';
-			}
-
-			echo "Input: ".$capt."<br/>";
+  	if(!empty($_POST['regName']) && !empty($_POST['regPass']) && !empty($_POST['regConfirm'])) {  
+		$confirm = $_POST["regConfirm"];
+		
+		if($confirm == $str){
+			$err = 'no error';
+			$stmt->execute();
 		}else{
-			echo "all fields are required.";
+			$err = 'error';
 		}
+
+		echo "Input: ".$capt."<br/>";
+	}else{
+		echo "all fields are required.";
 	}
 
 	echo "Captcha: ".$text."<br />";
