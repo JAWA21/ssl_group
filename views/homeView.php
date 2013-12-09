@@ -1,7 +1,7 @@
 <!-- homeView -->
 
 		<div class="wrap">
-			<img id="blogImg" src="images/blog.jpg" alt="SSL1312 Blog">
+			<img id="blogImg" src="../images/blog.jpg" alt="SSL1312 Blog">
 
 			<aside id="loginForm">
 				<form method="POST" action="?action=login">
