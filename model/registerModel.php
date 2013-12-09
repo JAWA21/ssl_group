@@ -1,0 +1,3 @@
+<?php
+//registerModel.php
+?>
