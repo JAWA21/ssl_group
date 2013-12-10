@@ -17,7 +17,7 @@ switch (strtolower($queryMethod)) {
 			//pass user/pass to checklogin method - if returns true, successful login
 			if ($login->checklogin($_POST['username'], $_POST['userpass'])) {
 				$queryData="Login successful.";
-				$view->getView('register');
+				$view->getView('login');
 			} else {
 				//login was NOT successful, send back to login page
 				$queryData="Login was not successful, try again.";
