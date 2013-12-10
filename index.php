@@ -6,6 +6,10 @@
  * Time: 5:23 PM
  */ 
 
+if(!session_id()){
+	session_start();
+}
+
 //index.php - default routing page
 
 	include "models/viewModel.php";

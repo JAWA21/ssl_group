@@ -2,16 +2,11 @@
 <html lang="en">
 	<head>
 		<title>SSL1312 Blog</title>
-
 		<meta charset="utf-8">
-
 		<link type="text/css" href="main.css" rel="stylesheet">
 	</head>
-
 	<body>
-
 	<header>
-
 		<div class="wrap">
 			<h1 id="logo">SSL1312</h1>
 			<nav id="main-nav">
@@ -22,5 +17,4 @@
 				</ul>
 			</nav>
 		</div>
-
 	</header>
