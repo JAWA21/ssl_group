@@ -66,8 +66,15 @@ nav {
 	padding: 10px;
 }
 
+h2 {
+	font-size: 2.2em;
+}
+
+h3 {
+	font-size: 1.8em;
+}
+
 #loginForm h3 {
-	font-size: 2em;
 	font-weight: bold;
 }
 
@@ -97,4 +104,7 @@ label {
 footer {
 	clear: left;
 	border-top: 1px solid slategray;
+	position: relative;
+	bottom: 0;
+	left: 0;
 }

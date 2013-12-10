@@ -1,6 +1,6 @@
 <div class="wrap">
 	<h2>User Registration</h2>
-	<form id="registerForm" method="POST" action="?action=loggedin">
+	<form id="registerForm" method="POST" action="?action=view&method=loggedin">
 		<p>
 			<label for="regName">Username:</label>
 			<input name="regName" type="text" id="regName">

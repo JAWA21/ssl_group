@@ -11,6 +11,7 @@
 			<h1 id="logo">SSL1312</h1>
 			<nav id="main-nav">
 				<ul>
+					<li><a href="?action=view&method=home">Home</a></li>
 					<li><a href="?action=view&method=register">Register</a></li>
 					<li><a href="?action=view&method=blog">Blog</a></li>
 					<li><a href="?action=login">About</a></li>
