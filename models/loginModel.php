@@ -11,7 +11,7 @@ class loginModel {
 	public function checklogin($username, $password) {
 		//check user/pass against db - returns true on success
 
-		$db = new PDO("mysql: hostname=localhost; dbname=simpBlog; port=8889", "root", "root");
+		$db = new PDO("mysql: hostname=localhost; dbname=simpleBlog; port=8889", "root", "root");
 		$q = "select user_name, user_pass
 				from users
 				where user_name = :user_name and user_pass= :user_pass";
