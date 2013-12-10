@@ -5,9 +5,6 @@
  * Date: 12/9/13
  * Time: 5:21 PM
  */ 
-
-session_start();
-
 require_once('models/loginModel.php');
 require_once('models/viewModel.php');
 $login = new loginModel();
