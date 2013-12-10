@@ -3,10 +3,6 @@
 
 //user login
 
-
-	$username =$_POST["username"];
-	$pass = $_POST["userpass"];
-
 	
 
 class loginModel {
@@ -26,17 +22,15 @@ class loginModel {
 		
 		$st->fetchAll();
 
-		echo $st;
 		$isgood =$st->rowCount();
 		
 		if($isgood > 0){
 			$_SESSION["userid"] = 1;
-
 			echo 'loggedin';
-			return 1;
+			return false;
 		}else{
 			$_SESSION["userid"] = 0;
-			return 0;
+			return true;
 		}
 	}
 
