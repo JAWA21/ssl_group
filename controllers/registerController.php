@@ -6,8 +6,7 @@ $view = new viewModel();
 $reg = new registerModel();
 
 if($queryMethod == 'loggedin') {
-
-	$resultMsg = $reg->loggedin($queryData);
+	$resultMsg = $reg->loggedin($_POST['regName'], $_POST['regPass'], $_POST['regConfirm']);
 	$view->getView("loggedin", $resultMsg);
 
 }

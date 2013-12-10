@@ -20,13 +20,12 @@
 			
 			
 		if($confirm == $hashsalt){
-			$err = 'no error';
+			echo 'no error';
 			$stmt->execute();
 		}else{
-			$err = 'error';
+			echo 'error';
 		}
 
-		
 	}else{
 		echo "all fields are required.";
 	}
