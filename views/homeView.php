@@ -5,7 +5,7 @@
 
 			<aside id="loginForm">
 				<h3>User Login</h3>
-				<form id="userLogin" method="POST" action="?action=login">
+				<form id="userLogin" method="POST" action="?action=view&method=loggedin">
 					<p>
 						<label for="username">Username:</label>
 						<input type="text" name="username" id="username">

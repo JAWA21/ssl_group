@@ -1,7 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: matt
- * Date: 12/9/13
- * Time: 5:20 PM
- */ 
+<div class="wrap">
+	<h2>User Profile</h2>
+</div>
