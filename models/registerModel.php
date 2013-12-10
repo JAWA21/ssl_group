@@ -17,6 +17,7 @@
 	$str = $_POST["regPass"];
 
 
+			$name = $_POST["regName"];
 
 			$text = $_SESSION['text'];
 
