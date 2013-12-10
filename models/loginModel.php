@@ -22,7 +22,6 @@ class loginModel {
 		
 		$st->fetchAll();
 
-		echo $st;
 		$isgood =$st->rowCount();
 		
 		if($isgood > 0){
