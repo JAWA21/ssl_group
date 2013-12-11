@@ -5,64 +5,41 @@
 	session_start();
 
 	class registerModel {
-		function loggedin($username, $pass, $confirm){
+		function register($username, $pass, $confirm){
 			//connect to database
-<<<<<<< HEAD
 
-			$name = $_POST["regName"];
-			$str = $_POST["regPass"];
+			$regName = $_POST["regName"];
+			$regPass = $_POST["regPass"];
+			$regConfirm = $_POST["regConfirm"];
 
-			$text = $_SESSION['text'];
+			//$text = $_SESSION['text'];
 
-			if(isset($_POST["pass"]) && !empty($_POST["pass"])){
-				$salt = 'mysectretpassword';
-				$hashsalt = md5($salt.$str);
-			}
+//			if(isset($regPass) && !empty($regPass)){
+//				$salt = 'mysectretpassword';
+//				$hashsalt = md5($salt.$str);
+//			}
 
-		    if(!empty($_POST['regName']) && !empty($_POST['regPass']) && !empty($_POST['regConfirm'])) {
-			    $dbh = new PDO("mysql: hostname=localhost; dbname=simpleBlog; port=8889", "root", "root");
-			    $stmt = $dbh->prepare("INSERT INTO users(user_name, user_pass) VALUES (:user_name, :user_pass)");
+		    if(!empty($regName) && !empty($regPass) && !empty($regConfirm)) {
 
-			    $stmt->bindParam(':user_name', $name);
-			    $stmt->bindParam(':user_pass', $hashsalt);
-=======
-			$dbh = new PDO("mysql: hostname=localhost; dbname=simpleBlog; port=8889", "root", "root");
-			$stmt = $dbh->prepare("INSERT INTO users(user_name, user_pass) VALUES (:user_name, :user_pass)");
+				$dbh = new PDO("mysql: hostname=localhost; dbname=simpleBlog; port=8889", "root", "root");
+				$stmt = $dbh->prepare("INSERT INTO users(user_name, user_pass) VALUES (:user_name, md5(:user_pass))");
 
-			$str = $pass;
-			$salt = 'mysectretpassword';
-			$confirm = md5($salt.$str);
-			$hashsalt = md5($salt.$str);
+			    $regPass = $pass;
+				//$salt = 'mysectretpassword';
+			    $regConfirm = $regPass;
+				//$hashsalt = md5($regPass);
 
-			$stmt->bindParam(':user_name', $username);
-			$stmt->bindParam(':user_pass', $hashsalt);
-			
-			
-		if($confirm == $hashsalt){
-			echo 'no error';
-			$stmt->execute();
-		}else{
-			echo 'error';
-		}
+				$stmt->bindParam(':user_name', $username);
+				$stmt->bindParam(':user_pass', $regPass);
 
-	}else{
-		echo "all fields are required.";
-	}
->>>>>>> 098570155d2c3853de2c2eb10c5e959e31ffd078
-
-				$confirm = $_POST["regConfirm"];
-
-				if($confirm == $str){
+				if($regConfirm == $regPass){
 					$err = 'no error';
 					$stmt->execute();
+					echo 'worked!';
 				}else{
 					$err = 'error';
 				}
-
-				echo "Input: ".$capt."<br/>";
-			}else{
-				echo "all fields are required.";
-			}
+		    }
 		}
 	}
 ?>
