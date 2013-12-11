@@ -13,6 +13,7 @@ if(!session_id()){
 //index.php - default routing page
 
 	include "models/viewModel.php";
+	include "models/blogController.php";
 
 	$view = new viewModel();
 

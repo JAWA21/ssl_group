@@ -2,7 +2,7 @@
 //blogModel.php
 
 
-	class blodModel {
+	class blogModel {
 
 		//retrieving all posts from database
 		public function getPosts() {
