@@ -5,6 +5,5 @@
 	<div id="userProfile">
 		<?php  ?>
 	</div>
-
 </div>
 

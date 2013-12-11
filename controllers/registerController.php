@@ -5,11 +5,11 @@ require_once('models/registerModel.php');
 $view = new viewModel();
 $reg = new registerModel();
 
-if($queryMethod == 'loggedin') {
-	$resultMsg = $reg->register($_POST['regName'], $_POST['regPass'], $_POST['regConfirm']);
-	$view->getView("loggedin", $resultMsg);
+// if($queryMethod == 'loggedin') {
+// 	$resultMsg = $reg->register($_POST['regName'], $_POST['regPass'], $_POST['regConfirm']);
+// 	$view->getView("loggedin", $resultMsg);
 
-}
+// }
 
 switch (strtolower($queryMethod)) {
 	case 'loggedin':
@@ -18,7 +18,7 @@ switch (strtolower($queryMethod)) {
 			//pass user/pass to checklogin method - if returns true, successful login
 			if ($register->register($_POST['regName'], $_POST['regPass'], $_POST['regConfirm'])) {
 				$queryData="Login successful.";
-				$view->getView('login');
+				$view->getView('loggedin');
 			} else {
 				//login was NOT successful, send back to login page
 				$queryData="Login was not successful, try again.";

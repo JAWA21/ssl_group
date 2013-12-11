@@ -12,15 +12,16 @@ class loginModel {
 		//check user/pass against db - returns true on success
 
 		$db = new PDO("mysql: hostname=localhost; dbname=simpleBlog; port=8889", "root", "root");
-		$q = "select user_name, user_pass
+
+		$stmt = $dbh->prepare("select user_name, user_pass
 				from users
-				where user_name = :user_name and user_pass= md5(:user_pass)";
-		$q->bindParam(':user_name', $username);
-		$q->bindParam(':user_pass', $password);
+				where user_name = :user_name and user_pass= md5(:user_pass));
+		$stmt->bindParam(':user_name', $username);
+		$stmt->bindParam(':user_pass', $password);
 
 		$st = $db->prepare($q);
-		$st->execute();
 		
+		$st->execute();
 		$st->fetchAll();
 		$isgood =$st->rowCount();
 		
