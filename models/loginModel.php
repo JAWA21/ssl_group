@@ -38,12 +38,6 @@ class loginModel {
 		//clear out the session information
 		session_destroy();
 		session_start();
-	}
-		
-		
-		
-		
-		
-		
+	}		
 }
 ?>
