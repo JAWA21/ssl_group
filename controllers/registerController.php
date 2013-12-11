@@ -6,7 +6,7 @@ $view = new viewModel();
 $reg = new registerModel();
 
 if($queryMethod == 'loggedin') {
-	$resultMsg = $reg->loggedin($_POST['regName'], $_POST['regPass'], $_POST['regConfirm']);
+	$resultMsg = $reg->register($_POST['regName'], $_POST['regPass'], $_POST['regConfirm']);
 	$view->getView("loggedin", $resultMsg);
 
 }
@@ -16,7 +16,7 @@ switch (strtolower($queryMethod)) {
 		//make sure $_POST has valid info
 		if (isset($_POST['regName']) && isset($_POST['regPass']) && isset($_POST['regConfirm'])) {
 			//pass user/pass to checklogin method - if returns true, successful login
-			if ($register->loggedin($_POST['regName'], $_POST['regPass'], $_POST['regConfirm'])) {
+			if ($register->register($_POST['regName'], $_POST['regPass'], $_POST['regConfirm'])) {
 				$queryData="Login successful.";
 				$view->getView('login');
 			} else {

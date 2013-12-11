@@ -84,21 +84,31 @@ label {
 	float: left;
 }
 
-#userLogin {
-	margin: 20px 0;
-}
-
-#userLogin p input {
+input[type="text"], input[type="password"] {
 	width: 250px;
 	padding: 5px;
 	clear: left;
 }
 
-#loginBtn, #regSubmit {
+#userLogin {
+	margin: 20px 0;
+}
+
+#loginBtn, #regSubmit ,#postBtn {
 	border: none;
 	padding: 5px;
 	width: 263px;
 	font-size: 1.4em;
+}
+
+#blogPost p label {
+	text-align: right;
+	width: 35px;
+	margin-right: 10px;
+}
+
+#postBtn {
+	margin-left: 45px;
 }
 
 footer {
@@ -108,3 +118,4 @@ footer {
 	bottom: 0;
 	left: 0;
 }
+
