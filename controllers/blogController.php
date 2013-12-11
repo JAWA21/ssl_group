@@ -12,3 +12,5 @@ require_once('models/viewModel.php');
 $blog = new blogModel();
 $view = new viewModel();
 
+$view->getView("views/blogView.php");
+$blog->getPosts();

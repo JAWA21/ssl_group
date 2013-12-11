@@ -35,6 +35,26 @@
 
 			return $post;
 		}
+
+		public function createPost($title = "", $text="") {
+			$db = new PDO("mysql:hostname=localhost;dbname=simpleBlog", "root", "root");
+
+			$sql = "INSERT INTO blog (blogTitle, blogText) VALUES (:title, :text)";
+
+			$st = $db->prepare($sql);
+
+			$st->execute(array(":title"=>$title, ":text"=>$text));
+		}
+
+		public function deletePost($bid = 0) {
+			$db = new PDO("mysql:hostname=localhost;dbname=simpleBlog", "root", "root");
+
+			$sql = "DELETE FROM blog WHERE blogid = :blog_id";
+
+			$st = $db->prepare($sql);
+
+			$st->execute(array(":blog_id"=>$bid));
+		}
 	}
 
 
