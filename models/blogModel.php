@@ -36,14 +36,21 @@
 			return $post;
 		}
 
-		public function createPost($title = "", $text="") {
+		public function createPost($userid = 0, $title = "", $text="", $username = "", $pub_date = "") {
 			$db = new PDO("mysql:hostname=localhost;dbname=simpleBlog", "root", "root");
 
-			$sql = "INSERT INTO blog (blogTitle, blogText) VALUES (:title, :text)";
+			$sql = "INSERT INTO blog (userid, title, text, username, pub_date) VALUES (:user_id, :title, :text, :user_name, :pub_date)";
 
 			$st = $db->prepare($sql);
 
-			$st->execute(array(":title"=>$title, ":text"=>$text));
+			$st->execute(array(
+				             ":user_id=>$userid",
+				             ":title"=>$title,
+				             ":text"=>$text,
+				             ":user_name"=>$username,
+				             ":pub_date"=>$pub_date
+			             )
+			);
 		}
 
 		public function deletePost($bid = 0) {

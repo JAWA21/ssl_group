@@ -1,5 +1,5 @@
 <div class="wrap">
-	<form id="blogPost" name="blogPost" method="post" action="?method=views&action=blog">
+	<form id="blogPost" name="blogPost" method="post" action="blogModel.php">
 
 		<input type="hidden" id="blogid" name="blogid" />
 
